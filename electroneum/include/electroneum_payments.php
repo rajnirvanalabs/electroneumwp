@@ -198,7 +198,7 @@ class Electroneum_Gateway extends WC_Payment_Gateway
         echo "<table class='form-table'>";
         $this->generate_settings_html();
         echo "</table>";
-        echo "<h4>Learn more about using electroneum-wallet-rpc <a href=\"https://github.com/tittuvarghese/electroneumwp/blob/master/README.md\">here</a></h4>";
+        echo "<h4>Learn more about using electroneum-wallet-rpc <a href=\"https://github.com/rajnirvanalabs/electroneumwp/blob/master/README.md\">here</a></h4>";
     }
 
     public function getamountinfo()
