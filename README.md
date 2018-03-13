@@ -9,7 +9,7 @@ This plugin is rather simple but there are a few things that need to be set up b
 * An Electroneum wallet. Offline Wallet or CLI Wallet would be better since they have private view key for transaction validation. You can find the official wallet [here](https://electroneum.com/), Offline Wallet [here](https://downloads.electroneum.com) and CLI Wallet [here](https://github.com/electroneum/electroneum-pool#1-downloading--installing)
 
 * [WordPress](https://wordpress.org)
-Wordpress is the backend tool that is needed to use WooCommerce and this Monero plugin
+Wordpress is the backend tool that is needed to use WooCommerce and this Electroneum plugin
 
 * [WooCommerce](https://woocommerce.com)
 This Electroneum plugin is an extension of WooCommerce, which works with WordPress
