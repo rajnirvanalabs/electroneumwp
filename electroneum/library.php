@@ -6,10 +6,14 @@
  * Written using the JSON RPC specification -
  * http://json-rpc.org/wiki/specification
  *
- * @author NirvanaLabs <rajesh@nirvanalabs.co>
- * http://nirvanalabs.co
- * Modified to work with electroneum-rpc wallet by NirvanaLabs
+ * @author Kacper Rowinski <krowinski@implix.com>
+ * http://implix.com
+ * Modified to work with monero-rpc wallet by Serhack and cryptochangements
+ *
+ * Modified March 2018 by NirvanaLabs to allow WooCommerce to accept Electroneum.com (ETN) Cryptocurrency
+ * Author URI: http://nirvanalabs.co
  */
+
 class Electroneum_Library
 {
     protected $url = null, $is_debug = false, $parameters_structure = 'array';

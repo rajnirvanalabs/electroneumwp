@@ -1,8 +1,12 @@
 <?php
 
 /*
+ * Main Gateway of Monero using a daemon online
+ * Authors: Serhack and cryptochangements
+ *
+ * Modified March 2018 by NirvanaLabs to allow WooCommerce to accept Electroneum.com (ETN) Cryptocurrency
  * Main Gateway of Electroneum using a daemon online
- * Authors: NirvanaLabs <nirvanalabs.co>
+ * Author URI: http://nirvanalabs.co
  */
 
 
@@ -327,7 +331,7 @@ class Electroneum_Gateway extends WC_Payment_Gateway
 
             if (!isset($address)) {
                 // If there isn't address (merchant missed that field!), $address will be the Electroneum address for donating :)
-                $address = "etnjxcJH7Dtjdq2UNgxxpA4hmEe6g77GVYSivh7V4kvcN36LJyxNF1RXYYxzxBAyDfLfraLp2rPqYMGb3Nq415HaAcQnwKcHL1";
+                $address = "INVALID ADDRESS"; // Fill With Donations Address
             }
             $uri = "electroneum:$address?tx_payment_id=$payment_id";
 

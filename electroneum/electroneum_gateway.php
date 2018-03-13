@@ -4,8 +4,11 @@ Plugin Name: Electroneum - WooCommerce Gateway
 Plugin URI: http://electroneum.com
 Description: Extends WooCommerce by Adding the Electroneum Gateway
 Version: 2.0
-Author: NirvanaLabs
-Author URI: http://electroneum.com
+Author: SerHack
+Author URI: http://monerointegrations.com
+
+Modified March 2018 by NirvanaLabs.co to allow WooCommerce to accept Electroneum.com (ETN) Cryptocurrency
+Author URI: http://nirvanalabs.co
 */
 
 // This code isn't for Dark Net Markets, please report them to Authority!

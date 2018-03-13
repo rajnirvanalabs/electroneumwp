@@ -77,6 +77,3 @@ If you chose to use electroneum-wallet-rpc:
 Finally:
 
 * Click on "Save changes"
-
-## Donating to the Devs :)
-ETN Address : `etnjxcJH7Dtjdq2UNgxxpA4hmEe6g77GVYSivh7V4kvcN36LJyxNF1RXYYxzxBAyDfLfraLp2rPqYMGb3Nq415HaAcQnwKcHL1`

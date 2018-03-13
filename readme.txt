@@ -1,5 +1,6 @@
 === Electroneum WooCommerce Extension ===
-Contributors: Nirvana Labs
+Contributors: serhack
+Modification : Nirvana Labs to support with Electroneum
 Website link: http://nirvanalabs.co
 Tags: electroneum, woocommerce, integration, payment, merchant, cryptocurrency, accept electroneum, electroneum woocommerce
 Requires at least: 4.0
