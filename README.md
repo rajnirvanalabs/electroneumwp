@@ -48,6 +48,8 @@ You can checkout the electroneum wallet commands from [here](https://github.com/
 
 * Start the Wallet RPC and leave it running in the background. This can be accomplished by running `electroneum-wallet-rpc --wallet-file /path/to/wallet/file --password walletPassword --rpc-bind-port 26969 --disable-rpc-login` where "/path/to/wallet/file" is the wallet file for your electroneum wallet. If you wish to use a remote node you can add the `--daemon-address` flag followed by the address of the node. `--daemon-address etn.mymininghub.com:443` for example.
 
+`Note: You must run your JSON RPC on the host server of WooCommerce against your wallet`
+
 ## Step 4: Setup Electroneum Gateway in WooCommerce
 
 * Navigate to the "settings" panel in the WooCommerce widget in the WordPress admin panel.
