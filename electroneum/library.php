@@ -18,8 +18,8 @@ class Electroneum_Library
 {
     protected $url = null, $is_debug = false, $parameters_structure = 'array';
     protected $curl_options = array(
-        CURLOPT_CONNECTTIMEOUT => 8,
-        CURLOPT_TIMEOUT => 8
+        CURLOPT_CONNECTTIMEOUT => 100,
+        CURLOPT_TIMEOUT => 100
     );
     protected $host;
     protected $port;
