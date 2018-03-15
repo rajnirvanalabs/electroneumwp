@@ -367,7 +367,7 @@ class Electroneum_Gateway extends WC_Payment_Gateway
                       <tbody>
                         <tr>
                           <td style='width:150px'>Send</td>
-                          <td><strong>".$amount_etn2." ETN</strong></td>
+                          <td><strong>".($amount_etn2+0.2)." ETN</strong></td>
                         </tr>
                         <tr>
                           <td>Payment ID</td>
@@ -448,7 +448,7 @@ class Electroneum_Gateway extends WC_Payment_Gateway
                       <tbody>
                         <tr>
                           <td style='width:150px;'>Send</td>
-                          <td><strong>".$amount_etn2." ETN</strong></td>
+                          <td><strong>".($amount_etn2+0.2)." ETN</strong></td>
                         </tr>
                         <tr>
                           <td>Payment ID</td>
@@ -528,9 +528,11 @@ class Electroneum_Gateway extends WC_Payment_Gateway
                 $discount = $new_amount * $discount_decimal;
                 $final_amount = $new_amount - $discount;
                 //echo $final_amount;
+                //$new_amount = $new_amount + 0.02; // Transaction Fee
                 $rounded_amount = round($final_amount, 2);//the electroneum wallet can't handle decimals smaller than 0.01
             } else {
                 $new_amount = $amount / $stored_rate_transformed;
+                //$new_amount = $new_amount + 0.02; // Transaction Fee
                 $rounded_amount = round($new_amount, 2); //the electroneum wallet can't handle decimals smaller than 0.01
             }
         } else // If the row has not been created then the live exchange rate will be grabbed and stored
@@ -543,7 +545,7 @@ class Electroneum_Gateway extends WC_Payment_Gateway
             if(isset($this->discount))
             {
                $new_amount = $amount / $etn_live_price;
-               $new_amount = $new_amount + 0.02; // Transaction Fee
+               //$new_amount = $new_amount + 0.02; // Transaction Fee
                $discount = $new_amount * $this->discount / 100;
                $discounted_price = $new_amount - $discount;
                $rounded_amount = round($discounted_price, 2);
