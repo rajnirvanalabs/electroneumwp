@@ -369,15 +369,17 @@ class NodeTools
         $array = json_decode($resp, true);
         $output_count = count($array['data']['outputs']);
         $i = 0;
+        $matching_transaction = array();
         while($i < $output_count)
         {
             if($array['data']['outputs'][$i]['match'])
             {
-                return $array['data']['outputs'][$i];
+                $matching_transaction[] = $array['data']['outputs'][$i];
             }
 
             $i++;
         }
+        return $matching_transaction;
 
     }
 

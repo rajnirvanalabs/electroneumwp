@@ -717,8 +717,13 @@ class Electroneum_Gateway extends WC_Payment_Gateway
         if(isset($output_found))
         {
             $amount_atomic_units = $amount * 100;
+            $final_transaction_value = 0;
+            foreach($output_found as $single_transaction_amount) {
+              if($single_transaction_amount['match']==true)
+                $final_transaction_value += $single_transaction_amount["amount"];
+            }
 
-            if($txs_from_block[$block_index]['payment_id'] == $payment_id && $output_found['amount'] >= $amount_atomic_units)
+            if($txs_from_block[$block_index]['payment_id'] == $payment_id && $final_transaction_value >= $amount_atomic_units)
             {
                 $this->on_verified($payment_id, $amount_atomic_units, $order_id);
             }
@@ -735,7 +740,7 @@ class Electroneum_Gateway extends WC_Payment_Gateway
     public function verify_zero_conf($payment_id, $amount, $order_id)
     {
         $tools = new NodeTools();
-        $txs_from_mempool = $tools->get_mempool_txs();;
+        $txs_from_mempool = $tools->get_mempool_txs();
         $tx_count = count($txs_from_mempool['data']['txs']);
         $i = 0;
         $output_found;
@@ -758,7 +763,13 @@ class Electroneum_Gateway extends WC_Payment_Gateway
         if(isset($output_found))
         {
             $amount_atomic_units = $amount * 100;
-            if($txs_from_mempool['data']['txs'][$tx_i]['payment_id'] == $payment_id && $output_found['amount'] >= $amount_atomic_units)
+            $final_transaction_value = 0;
+            foreach($output_found as $single_transaction_amount) {
+              if($single_transaction_amount['match']==true)
+                $final_transaction_value += $single_transaction_amount["amount"];
+            }
+
+            if($txs_from_mempool['data']['txs'][$tx_i]['payment_id'] == $payment_id && $final_transaction_value >= $amount_atomic_units)
             {
                 $this->on_verified($payment_id, $amount_atomic_units, $order_id);
             }
