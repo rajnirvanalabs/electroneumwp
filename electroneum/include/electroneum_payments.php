@@ -537,12 +537,13 @@ class Electroneum_Gateway extends WC_Payment_Gateway
         {
             $etn_live_price = $this->retriveprice($currency);
             $live_for_storing = $etn_live_price * 100; //This will remove the decimal so that it can easily be stored as an integer
-            echo "Live price for ".$live_for_storing;
+            //echo "Live price for ".$live_for_storing;
 
             $wpdb->query("INSERT INTO $payment_id (rate) VALUES ($live_for_storing)");
             if(isset($this->discount))
             {
                $new_amount = $amount / $etn_live_price;
+               $new_amount = $new_amount + 0.02; // Transaction Fee
                $discount = $new_amount * $this->discount / 100;
                $discounted_price = $new_amount - $discount;
                $rounded_amount = round($discounted_price, 2);
